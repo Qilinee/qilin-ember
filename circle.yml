@@ -7,12 +7,11 @@ dependencies:
   - npm install
   - bower install
   - npm install -g ember-cli
+  - ember build
 
 deployment:
   prod:
     branch: master
-    commands:
-      - ember build
     codedeploy:
       qilin-emberapp:
         application_root: /dist
