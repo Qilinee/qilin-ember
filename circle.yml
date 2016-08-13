@@ -9,8 +9,10 @@ dependencies:
   - npm install -g ember-cli
 
 deployment:
-  staging:
+  prod:
     branch: master
+    commands:
+      - ember build
     codedeploy:
       qilin-emberapp:
         application_root: /dist
