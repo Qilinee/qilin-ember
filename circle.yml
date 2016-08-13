@@ -22,6 +22,7 @@ deployment:
             bucket: codedeploy-qilinwww
             key_pattern: circleci-demo-app-{BRANCH}-{SHORT_COMMIT}
         deployment_group: qilin-emberdg
+  uat:
     branch: uat
     codedeploy:
       qilin-emberapp:
