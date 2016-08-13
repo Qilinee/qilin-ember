@@ -11,4 +11,5 @@ deployment:
   prod:
     branch: master
     commands:
+      - ember build
       - aws s3 sync dist/ s3://circles3bucket/ --delete
