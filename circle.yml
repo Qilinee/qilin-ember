@@ -6,7 +6,3 @@ dependencies:
   override:
   - npm install
   - bower install
-
-test:
-  override:
-    - echo "test"
