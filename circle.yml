@@ -8,22 +8,16 @@ dependencies:
   - bower install
   - npm install -g ember-cli
 
-
 deployment:
-  prod:
+  staging:
     branch: master
-#S3 Deploy
-#      commands:
-#      - ember build
-#      - aws s3 sync dist/ s3://circles3bucket/ --delete
-#CodeDeploy Deploy
-       codedeploy:
-         qilin-emberapp:
-           application_root: /dist
-           revision_location:
-             revision_type: S3
-             s3_location:
-               bucket: codedeploy-qilin-ember
-               key_pattern: apps/qilin-ember-{SHORT_COMMIT}-{BUILD_NUM}
-           region: ap-southeast-2
-           deployment_group: qilin-emberdg
+    codedeploy:
+      qilin-emberapp:
+        application_root: /dist
+        region: ap-southeast-2
+        revision_location:
+          revision_type: S3
+          s3_location:
+            bucket: codedeploy-qilinwww
+            key_pattern: circleci-demo-app-{BRANCH}-{SHORT_COMMIT}
+        deployment_group: qilin-emberdg
