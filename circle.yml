@@ -6,7 +6,6 @@ dependencies:
   override:
   - npm install
   - bower install
-  - npm install -g ember-cli
   - ember build
   - cp codedeploy/appspec.yml dist
 
